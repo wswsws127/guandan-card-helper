@@ -1,0 +1,16 @@
+<div class="input-container">
+    <form class="input-form full-width">
+    <mat-form-field appearance="fill" class="full-width">
+      <input
+        matInput
+        [formControl]="inputValueControl"
+        placeholder="输入牌点（如555666或kk）"
+        [errorStateMatcher]="matcher"
+        (keydown.enter)="processInput()"
+      />
+    </mat-form-field>
+<br>
+    <button mat-raised-button color="primary" (click)="processInput()">确认输入</button>
+</form> 
+</div>
+  

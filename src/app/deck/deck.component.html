@@ -1,0 +1,25 @@
+
+<div id="outer-box">
+
+<div id="deck" class="row">
+  <!-- 卡片列表 -->
+  <div id="box">
+    <app-card
+      *ngFor="let card of cards"
+      [cardName]="card.cardName"
+      [count]="card.count"
+      [maxCount]="card.maxCount"
+      (countChange)="handleCardCountChange($event)">
+    </app-card>
+  </div>
+</div>
+
+
+  <app-global-input-box (adjustCounts)="adjustCardCounts($event)"></app-global-input-box>
+  <div id="inner-box">
+ <!-- 重置按钮 -->
+ <button id="resetBtn"  (click)="resetAll()">重置</button>
+</div>
+
+</div>
+

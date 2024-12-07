@@ -1,0 +1,12 @@
+<div id="analysisBox">
+  <p><strong>对手可能存在的大牌：</strong></p>
+  <p id="threePairs">三连对：{{ threePairs.length ? threePairs.join(', ') : '无' }}</p>
+  <p id="steelPlates">钢板：{{ steelPlates.length ? steelPlates.join(', ') : '无' }}</p>
+  <p id="sequences">顺子：{{ sequences.length ? sequences.join(', ') : '无' }}</p>
+  <p id="fourBombs">四炸：{{ bombs[4]?.length ? bombs[4].join(', ') : '无' }}</p>
+  <p id="fiveBombs">五炸：{{ bombs[5]?.length ? bombs[5].join(', ') : '无' }}</p>
+  <p id="sixBombs">六炸：{{ bombs[6]?.length ? bombs[6].join(', ') : '无' }}</p>
+  <p id="sevenBombs">七炸：{{ bombs[7]?.length ? bombs[7].join(', ') : '无' }}</p>
+  <p id="eightBombs">八炸：{{ bombs[8]?.length ? bombs[8].join(', ') : '无' }}</p>  
+  <p id="heavenlyKingBomb">天王炸：{{ hasHeavenlyKingBomb ? '有' : '无' }}</p>
+</div>

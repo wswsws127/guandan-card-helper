@@ -1,0 +1,56 @@
+#analysisBox {
+    padding: 15px; /* 增加内边距，提供内容间的空间 */
+    border: 1px solid #ccc; /* 设置边框颜色 */
+    border-radius: 8px; /* 圆角效果 */
+    margin-top: 20px; /* 与上方内容保持间距 */
+    background-color: #f9f9f9; /* 柔和的背景色，便于阅读 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 添加轻微阴影，提升视觉效果 */
+    font-size: 16px; /* 适中的文字大小 */
+    color: #333; /* 默认文字颜色 */
+    text-align: center; /* 文字居中对齐 */
+  }
+  
+  
+  #analysisBox p {
+    margin: 8px 0; /* 每段文字之间的垂直间距 */
+    line-height: 1.6; /* 行高调整，增强可读性 */
+    font-size: 15px; /* 适中的字体大小 */
+  }
+  
+  #analysisBox p strong {
+    font-weight: bold; /* 标题文字加粗 */
+    font-size: 16px; /* 标题文字稍大 */
+    color: #000; /* 强调文字颜色 */
+  }
+  
+  #analysisBox p:nth-child(1) {
+    font-size: 18px; /* 第一行标题较大，突出强调 */
+    margin-bottom: 12px; /* 与其他段落有更多间距 */
+  }
+  
+  #analysisBox p:not(:nth-child(1)):before {
+    content: '• '; /* 添加圆点符号 */
+    color: #666; /* 圆点符号颜色 */
+  }
+  
+  #analysisBox p span {
+    font-weight: bold; /* 数字内容加粗 */
+    color: #007bff; /* 重要数值的颜色 */
+  }
+  
+  /* 响应式设计：适配小屏幕 */
+  @media (max-width: 600px) {
+    #analysisBox {
+      font-size: 14px; /* 缩小整体字体大小 */
+      padding: 10px; /* 缩小内边距 */
+    }
+  
+    #analysisBox p {
+      font-size: 14px; /* 调整段落文字大小 */
+    }
+  
+    #analysisBox p strong {
+      font-size: 15px; /* 标题文字相应缩小 */
+    }
+  }
+  

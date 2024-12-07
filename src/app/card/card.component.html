@@ -1,0 +1,28 @@
+<div class="card" [ngClass]="getCardStatus()">
+  <!-- 卡片牌值 -->
+  <span class="card-value">{{ cardName }}</span>
+
+  <!-- 按钮容器 -->
+  <div class="btn-container">
+    <!-- 增加库存按钮 -->
+    <button
+      class="ctrl-btn"
+      (click)="changeCount(1)"
+      [disabled]="count >= maxCount"
+    >
+      &#9650;
+    </button>
+
+    <!-- 当前库存显示 -->
+    <span class="card-count">{{ count }}</span>
+
+    <!-- 减少库存按钮 -->
+    <button
+      class="ctrl-btn"
+      (click)="changeCount(-1)"
+      [disabled]="count <= 0"
+    >
+      &#9660;
+    </button>
+  </div>
+</div>

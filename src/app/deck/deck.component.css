@@ -1,0 +1,66 @@
+#deck {
+  display: flex;
+  flex-direction: column; /* 垂直布局，卡片组和其他元素分层 */
+  align-items: center; /* 居中对齐 */
+  padding: 20px; /* 整体内边距 */
+  gap: 20px; /* 子元素之间的间距 */
+  margin: 0 auto; /* 居中布局 */
+}
+
+#outer-box{
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  border: 1px solid #ccc; /* 整体边框 */
+  border-radius: 10px; /* 圆角效果 */
+  align-items: center; /* 居中对齐 */
+  background-color: #f9f9f9; /* 背景颜色 */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+  margin: 0 auto; /* 居中布局 */
+  padding: 20px; /* 整体内边距 */
+}
+
+#inner-box{
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column; /* 将按钮和输入框纵向排列 */
+  align-items: center;
+}
+
+#box {
+  display: flex;
+  flex-wrap: wrap; /* 自动换行布局 */
+  justify-content: center; /* 水平居中对齐 */
+  gap: 15px; /* 卡片之间的间距 */
+  width: 100%; /* 占满父容器宽度 */
+}
+
+#resetBtn {
+  width: inherit;
+  margin-top: 10px; /* 与上方输入框的间距 */
+  padding: 10px 20px; /* 按钮内边距 */
+  font-size: 16px; /* 按钮文字大小 */
+  background-color: #f5f5f5; /* 按钮背景色 */
+  color: darkred; /* 按钮文字颜色 */
+  border: 1px solid #ccc; /* 边框颜色 */
+  border-radius: 5px; /* 圆角效果 */
+  cursor: pointer; /* 鼠标悬停样式 */
+  transition: background-color 0.3s ease; /* 背景色过渡动画 */
+}
+
+#resetBtn:hover {
+  background-color: #ffc72c; /* 悬停背景色 */
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+  #box {
+    gap: 10px; /* 缩小卡片之间的间距 */
+  }
+
+  #resetBtn {
+    width: 100%; /* 小屏幕按钮全宽 */
+    font-size: 14px; /* 调整按钮文字大小 */
+    padding: 8px; /* 缩小按钮内边距 */
+  }
+}

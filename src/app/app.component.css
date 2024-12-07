@@ -1,0 +1,4 @@
+.input-container input {
+    width: 80% !important; /* 使用 !important 以确保样式优先级 */
+  }
+  

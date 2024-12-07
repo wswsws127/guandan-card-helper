@@ -1,0 +1,44 @@
+.input-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+
+.input-container {
+    width: 100%; /* 让容器占据父容器的全部宽度 */
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; /* 将按钮和输入框纵向排列 */
+    align-items: center;
+    gap: 10px;
+  }
+  
+  input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  button {
+    width: 50%; /* 按钮宽度适中 */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #f5f5f5;
+    color: darkred;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #ffc72c;
+  }
+  
