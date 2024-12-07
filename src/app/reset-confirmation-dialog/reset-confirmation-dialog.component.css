@@ -1,0 +1,63 @@
+/* 弹窗标题样式 */
+h1 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #3f51b5; /* 深蓝色 */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  /* 弹窗内容 */
+  div[mat-dialog-content] {
+    font-size: 16px;
+    color: #333; /* 深灰色 */
+    line-height: 1.5;
+    margin: 15px 0;
+    text-align: center;
+  }
+  
+  /* 按钮容器 */
+  div[mat-dialog-actions] {
+    display: flex;
+    justify-content: space-between; /* 两端对齐 */
+    padding-top: 10px;
+  }
+  
+  /* 按钮样式 */
+  button {
+    min-width: 80px;
+    margin: 5px;
+  }
+  
+  /* 确认按钮的额外样式 */
+  button[color="warn"] {
+    background-color: #f44336; /* 红色 */
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[color="warn"]:hover {
+    background-color: #d32f2f; /* 深红色 */
+  }
+  
+  button[mat-button] {
+    color: #757575; /* 灰色 */
+    transition: color 0.3s ease;
+  }
+  
+  button[mat-button]:hover {
+    color: #000; /* 黑色 */
+  }
+  
+  /* 弹窗的整体布局 */
+  .mat-dialog-container {
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 400px; /* 最大宽度 */
+    background-color: #fff; /* 白色背景 */
+  }
+  

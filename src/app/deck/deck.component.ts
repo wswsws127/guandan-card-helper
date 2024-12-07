@@ -3,11 +3,14 @@ import { CommonModule } from '@angular/common';
 import { CardComponent } from '../card/card.component';
 import { GlobalInputBoxComponent } from '../global-input-box/global-input-box.component';
 import { SharedService } from '../shared.service';
+import { MatDialog } from '@angular/material/dialog';
+import { ResetConfirmationDialogComponent } from '../reset-confirmation-dialog/reset-confirmation-dialog.component'; // 引入弹窗组件
+
 
 @Component({
   selector: 'app-deck',
   standalone: true,
-  imports: [CardComponent, GlobalInputBoxComponent, CommonModule],
+  imports: [CardComponent, GlobalInputBoxComponent, CommonModule, ResetConfirmationDialogComponent],
   templateUrl: './deck.component.html',
   styleUrl: './deck.component.css'
 })
@@ -16,7 +19,7 @@ export class DeckComponent {
   cards: { cardName: string; count: number; maxCount: number }[] = []; // 牌组信息
 
   // 初始化牌组
-  constructor(private sharedService: SharedService) {
+  constructor(private sharedService: SharedService, private dialog: MatDialog) {
     const initialCards = [
       { cardName: '👑', maxCount: 2 },
       { cardName: '⚔', maxCount: 2 },
@@ -65,6 +68,21 @@ export class DeckComponent {
       }
     });
   }
+
+  /**
+   * 打开确认弹窗，重置所有卡片库存
+   */
+  confirmResetAll() {
+    const dialogRef = this.dialog.open(ResetConfirmationDialogComponent);
+
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+        // 如果用户确认，则重置
+        this.resetAll();
+      }
+    });
+  }
+
 
   /**
    * 重置所有卡片库存
