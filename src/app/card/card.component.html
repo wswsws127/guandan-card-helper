@@ -24,5 +24,8 @@
     >
       &#9660;
     </button>
+    <ng-container *ngIf="cardName !== '⚔' && cardName !== '👑'">
+      <fa-icon [icon]="faBomb" (click)="changeCount(-4)" class="bomb-button ctrl-btn"></fa-icon>
+  </ng-container>
   </div>
 </div>

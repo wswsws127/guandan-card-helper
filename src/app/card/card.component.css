@@ -82,6 +82,12 @@
     font-weight: bold;
     transition: color 0.3s ease;
   }
+
+  .bomb-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
   
   /* 响应式设计：适配小屏幕 */
   @media (max-width: 600px) {

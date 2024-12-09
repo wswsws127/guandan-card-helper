@@ -1,14 +1,17 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faBomb } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports:[CommonModule],
+  imports:[CommonModule,FontAwesomeModule],
   templateUrl: './card.component.html',
   styleUrl: './card.component.css'
 })
 export class CardComponent {
+  faBomb =faBomb;
   @Input() cardName!: string; // 卡片名称，例如 'A', 'K', '👑'
   @Input() count!: number; // 当前库存数量
   @Input() maxCount!: number; // 最大库存数量
@@ -41,5 +44,9 @@ export class CardComponent {
     } else {
       return 'empty'; // 无库存
     }
+  }
+
+  reduceCount() {
+    this.count -= 4;
   }
 }
